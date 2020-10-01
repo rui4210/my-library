@@ -1,0 +1,59 @@
+<%= render "header" %>
+
+<%#タイトル　表示%>
+<div class="book-show-flame">
+  <div class="book-show">
+    <div class="book-show-border">
+      <div class="book-show-title">
+        <%= @book.title %>
+      </div>
+    </div>
+
+<%#カバー・著者・ジャンル・登録日　表示%>
+    <div class="book-show-box1">
+      <div class="book-show-cover">
+        <%#= image_tag @book.cover, class:"book-box-img" %>
+      </div>
+      <div class="book-show-informations1">
+        <div class="book-text">
+          著者：
+        </div>
+        <div class="book-show-author">
+          <%= @book.author %>
+        </div>
+        <div class="book-text">
+          出版：
+        </div>
+        <div class="book-show-publishing">
+          <%= @book.publishing %>
+        </div>
+        <div class="book-text">
+          ジャンル：
+        </div>
+        <div class="book-show-genre">
+          <%= @book.genre %>
+        </div>
+        <div class="book-text">
+          登録日：
+        </div>
+        <div class="book-show-record-date">
+          <%= @book.record_date %>
+        </div>
+      </div>
+    </div>
+    <div class="book-show-informations2">
+        <div class="book-memo-text">
+          メモ
+        </div>
+      <div class="book-memo">
+        <%= @book.memo %>
+      </div>
+      <div class="book-impression-text">
+          感想・要約
+      </div>
+      <div class="book-impression">
+        <%= @book.impression %>
+      </div>
+    </div>
+  </div>
+</div>
