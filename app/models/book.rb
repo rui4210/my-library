@@ -3,7 +3,7 @@ class Book < ApplicationRecord
   belongs_to_active_hash :reading_situation
   
   #アソシエーション
-  belongs_to :user
+  #belongs_to :user
   has_one_attached :image
   has_one_attached :cover
 
@@ -12,6 +12,8 @@ class Book < ApplicationRecord
   with_options presence: true do
     #タイトル
     validates :title
+    #表紙
+    validates :cover
     #登録日
     validates :record_date
     #読書状況

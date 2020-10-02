@@ -95,13 +95,20 @@
 }
 
 .book-cover-flame {
-  background-color: cadetblue;
   width: 100%;
   max-width: 150px;
   height: 190px;
   display: block;
-  box-shadow: 0 0 5px rgba(160,166,179,0.3);
+  /*box-shadow: 0 0 5px rgba(160,166,179,0.3);*/
   margin: 5px;
+}
+
+.book-box-img {
+  width: 100%;
+  max-width: 150px;
+  max-height: 190px;
+  background-color: #fafafa;
+  object-fit: contain;
 }
 
 .book-informations {
