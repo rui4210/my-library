@@ -1,7 +1,10 @@
 class Book < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
+  #読書状況（ActiveHash）のアソシエーションの設定
   belongs_to_active_hash :reading_situation
-  
+  #評価（ActiveHash）のアソシエーションの設定
+  belongs_to_active_hash :evaluation
+
   #アソシエーション
   #belongs_to :user
   has_one_attached :image

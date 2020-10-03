@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_09_30_063746) do
     t.text "memo"
     t.text "impression"
     t.integer "reading_situation_id", null: false
+    t.integer "evaluation_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

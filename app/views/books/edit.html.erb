@@ -3,7 +3,7 @@
 
 <div class="books-registration-contents">
   <div class="books-registration-main">
-    <h2 class="books-registration-title">本の情報を入力</h2>
+    <h2 class="books-registration-title">本の情報を編集</h2>
     <%= form_with model: @book, local: true do |f| %>
       <%# 本の分類分け %>
       <div class="new-books2">
@@ -47,6 +47,7 @@
         </div>
       </div>
       <%# /表紙画像 %>
+
       <%#　本の情報　%>
       <%# タイトル、ジャンル、著者、出版 %>
       <div class="new-books">
@@ -112,10 +113,10 @@
      <%# /まとめ画像 %>
      <%# 下部ボタン %>
       <div class="registration-btn-contents1">
-        <%= f.submit "登録する" ,class:"registration-btn" %>
+        <%= f.submit "変更する" ,class:"registration-btn" %>
       </div>
       <div class="registration-btn-contents2">
-        <%=link_to 'もどる', books_path, class:"back-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
       </div>
       <%# /下部ボタン %>
   </div>

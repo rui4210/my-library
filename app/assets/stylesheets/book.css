@@ -29,7 +29,15 @@
   margin-right: 15px;
 }
 
-.header-logo {
+.header-logo1 {
+  margin: 0px 15px;
+}
+
+.header-logo2 {
+  margin: 0px 15px;
+}
+
+.header-logo3 {
   margin: 0px 15px;
 }
 
@@ -103,7 +111,7 @@
   margin: 5px;
 }
 
-.book-box-img {
+.book-index-img {
   width: 100%;
   max-width: 150px;
   max-height: 190px;

@@ -9,6 +9,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.text :memo
       t.text :impression
       t.integer :reading_situation_id, null: false
+      t.integer :evaluation_id
       t.timestamps
     end
   end
