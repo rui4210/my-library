@@ -1,25 +1,24 @@
 <div class="header">
   <div class="header-flame">
-  <div class="header-title">
-    <%= link_to image_tag('logo.png' , size: '90x90'), root_path %>
-  </div>
-  <div class="bookshelf-header-form">
-      <%= form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form| %>
-        <%= form.text_field :keyword, placeholder: "キーワード入力(タイトル・著者・メモ...)", class: "search-input" %>
-        <%= form.submit "検索", class: "search-btn" %>
-      <% end %>
-      
-  </div>
-  <div class="header-logos">
-    <div class="header-logo1">
-      <%= link_to image_tag('header-logo1.png' , size: '35x35'), new_book_path %>
+    <div class="header-title">
+      <%= link_to image_tag('logo.png' , size: '90x90'), root_path %>
     </div>
-    <div class="header-logo2">
-      <%= link_to image_tag('header-logo2.png' , size: '35x35'), '#' %>
+    <div class="bookshelf-header-form">
+        <%= form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "キーワード入力(タイトル・著者・メモ...)", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+        <% end %>
     </div>
-    <div class="header-logo3">
-      <%= link_to image_tag('header-logo3.png' , size: '35x35'), '#' %>
+    <div class="header-logos">
+      <div class="header-logo1">
+        <%= link_to image_tag('header-logo1.png', size: '35x35'), new_book_path %>
+      </div>
+      <div class="header-logo2">
+        <%= link_to image_tag('header-logo2.png' , size: '35x35'), '#' %>
+      </div>
+      <div class="header-logo3">
+        <%= link_to image_tag('header-logo3.png' , size: '35x35'), '#' %>
+      </div>
     </div>
-  </div>
   </div>
 </div>
