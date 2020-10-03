@@ -10,6 +10,21 @@ class Book < ApplicationRecord
   has_one_attached :image
   has_one_attached :cover
 
+
+  #検索機能
+  def self.search(search)
+    if search != ""
+      Book.where('title LIKE(?)', "%#{search}%")
+      Book.where('author LIKE(?)', "%#{search}%")
+      Book.where('genre LIKE(?)', "%#{search}%")
+      Book.where('publishing LIKE(?)', "%#{search}%")
+      Book.where('record_date LIKE(?)', "%#{search}%")
+      Book.where('memo LIKE(?)', "%#{search}%")
+    else
+      Book.all
+    end
+  end
+
   #本情報
   #必須であること
   with_options presence: true do

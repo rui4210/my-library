@@ -37,10 +37,14 @@ class BooksController < ApplicationController
     @book.destroy
   end
 
+  def search
+    @books = Book.search(params[:keyword])
+  end
+
   private
 
   def book_params
-    params.require(:book).permit(:reading_situation_id, :record_date, :title, :cover, :genre, :author, :publishing, :memo, :impression, :image, :evaluation)
+    params.require(:book).permit(:reading_situation_id, :record_date, :title, :cover, :genre, :author, :publishing, :memo, :impression, :image, :evaluation_id)
   end
 
 end

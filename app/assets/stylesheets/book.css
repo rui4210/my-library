@@ -47,13 +47,13 @@
   width: 100%;
 }
 
-.form-input {
+.search-form {
   width:100%;
   margin-bottom: 5px;
   display: flex;
 }
 
-.form-message {
+.search-input {
   border: none;
   height: 30px;
   width: 100%;
@@ -64,7 +64,7 @@
   border-radius : 1%;
 }
 
-.form-submit {
+.search-btn {
   background-color: #253141;
   border: none;
   color: #fff;
@@ -131,6 +131,7 @@
   flex-direction: column;
   margin:5px -5px 5px 5px;
   box-shadow: 0 0 3px rgba(160,166,179,0.3);
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
 }
 
 .book-title {
@@ -161,4 +162,14 @@
   align-items: flex-end;
   margin-right: 5px;
   margin-bottom: -35px;
+}
+
+.search-titel {
+  width: 100%;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+  padding-top: 80px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  margin-bottom: -60px;
 }
