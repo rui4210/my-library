@@ -7,13 +7,26 @@
 <div class="main-view" >
   <div class="users-header-logo">
   </div>
+    <% if user_signed_in? %>
     <span class="top-moji">my library</span>
     <span class="top-moji">あなただけの、図書館を</span>
+    <span class="top-moji">〜<%= current_user.name %>〜</span>
+    <% else %>
+    <span class="top-moji">my library</span>
+    <span class="top-moji">あなただけの、図書館を</span>
+    <% end %>
     <div class="top-icon-logo">
-      <div class="icon-box">
-        <%= link_to image_tag('signinlogo.jpg' , size: '200x50'), new_user_registration_path %>
-        <%= link_to image_tag('signuplogo.jpg' , size: '200x50'), new_user_session_path %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="icon-box">
+          <%= link_to image_tag('login.jpg' , size: '200x50'), books_path %>
+          <%= link_to image_tag('logout.jpg' , size: '200x50'), destroy_user_session_path, method: :delete %>
+        </div>
+      <% else %>
+         <div class="icon-box">
+          <%= link_to image_tag('signinlogo.jpg' , size: '200x50'), new_user_registration_path %>
+          <%= link_to image_tag('signuplogo.jpg' , size: '200x50'), new_user_session_path %>
+        </div>
+      <% end %>
     </div>
 </div>
 

@@ -6,7 +6,7 @@ class Book < ApplicationRecord
   belongs_to_active_hash :evaluation
 
   #アソシエーション
-  #elongs_to :user
+  belongs_to :user
   has_one_attached :image
   has_one_attached :cover
 
