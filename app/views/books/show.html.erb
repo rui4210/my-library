@@ -11,48 +11,95 @@
 
 <%#カバー・著者・ジャンル・登録日　表示%>
     <div class="book-show-box1">
-      <div class="book-show-cover">
-        <%#= image_tag @book.cover, class:"book-box-img" %>
+      <div class="book-show-cover1">
+        <%= image_tag @book.cover, class:"book-show-cover2" %>
       </div>
       <div class="book-show-informations1">
         <div class="book-text">
-          著者：
+          〜著者〜
         </div>
         <div class="book-show-author">
           <%= @book.author %>
         </div>
         <div class="book-text">
-          出版：
+          〜出版〜
         </div>
         <div class="book-show-publishing">
           <%= @book.publishing %>
         </div>
         <div class="book-text">
-          ジャンル：
+          〜ジャンル〜
         </div>
         <div class="book-show-genre">
           <%= @book.genre %>
         </div>
         <div class="book-text">
-          登録日：
+          〜登録日〜
         </div>
         <div class="book-show-record-date">
           <%= @book.record_date %>
         </div>
       </div>
     </div>
+<%#評価、本棚　表示%>
+
     <div class="book-show-informations2">
-        <div class="book-memo-text">
-          メモ
+      <div class="book-reading-situation1">
+        <div class="book-reading-situation2">
+          〜本棚の種類〜
         </div>
+        <div class="book-show-reading-situation">
+          <%= @book.reading_situation.name %>
+        </div>
+      </div>
+      <div class="brank">
+      </div>
+      <div class="book-evaluation1">
+        <div class="book-evaluation2">
+          〜評価〜
+        </div>
+        <div class="book-show-evaluation">
+          <%= @book.evaluation.name %>
+        </div>
+      </div>
+    </div>
+
+<%#メモ・感想要約・感想要約（画像）表示%>
+    <div class="book-show-informations3">
+      <div class="book-memo-text">
+        〜メモ〜
+      </div>
       <div class="book-memo">
         <%= @book.memo %>
       </div>
       <div class="book-impression-text">
-          感想・要約
+          〜感想・要約〜
       </div>
       <div class="book-impression">
         <%= @book.impression %>
+      </div>
+      <div class="book-impression-text">
+          〜感想・要約(画像)〜
+      </div>
+    </div>
+      <div class="book-show-image1">
+        <% if @book.image = nil %>
+          <%= image_tag @book.image, class:"book-show-image2" %>
+        <% else %>
+          <h3 class="no-image-text">No Image</h3>
+        <% end %>
+      </div>
+
+<%# 編集・削除ボタン 表示%>
+    <div class="book-show-btns">
+      <div class="show-btn-contents">
+        <%=link_to '編集', edit_book_path, method: :get, class:"show-edit-btn" %>
+      </div>
+      <div class="show-btn-contents">
+        <%=link_to '削除', book_path(@book.id), method: :delete, class:"show-delete-btn" %>
+      </div>
+      <div class="show-btn-contents">
+        <%=link_to '戻る', books_path, class:"show-back-btn" %>
       </div>
     </div>
   </div>

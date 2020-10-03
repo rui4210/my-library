@@ -1,0 +1,11 @@
+<%= render "header" %>
+
+<div class="search-titel">
+  〜検索結果〜
+</div>
+
+<div class="search-bookshelf">
+  <% @books.each do |book| %>
+  <%= render partial: "bookshelf", locals: { book: book } %>
+  <% end %>
+</div>

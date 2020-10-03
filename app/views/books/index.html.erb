@@ -1,28 +1,3 @@
 <%= render "header" %>
 
-<div class="bookshelf">
-  <% @books.each do |book| %>
-  <div class="book-flame">
-    <div class="book-cover-flame">
-      <%= book.title %>
-    </div>
-    <div class="book-informations">
-      <div class="book-title">
-        <%= book.title %>
-      </div>
-      <div class="book-author">
-        著者：  <%= book.author %>
-      </div>
-      <div class="book-genre">
-        ジャンル：  <%= book.genre %>
-      </div>
-      <div class="book-record-date">
-       登録日：  <%= book.record_date %>
-      </div>
-    </div>
-    <div class="book-logo">
-      <%= link_to image_tag('book-icon.png' , size: '60x60'), book_path(book.id) %>
-    </div>
-  </div>
-  <% end %>
-</div>
+<%= render "bookshelf" %>
