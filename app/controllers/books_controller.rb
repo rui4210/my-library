@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :edit, :search]
+  before_action :set_books, only: [:edit, :update, :show, :destroy]
+
 
   def index
     @books = Book.order("created_at DESC")
@@ -11,7 +14,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      return redirect_to root_path
+      return redirect_to books_path
     end
       render 'new'
   end
@@ -38,13 +41,23 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books = Book.search(params[:keyword])
+    @books = Book.search(params[:seach])
   end
 
   private
 
   def book_params
     params.require(:book).permit(:reading_situation_id, :record_date, :title, :cover, :genre, :author, :publishing, :memo, :impression, :image, :evaluation_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to user_session_path
+    end
+  end
+
+  def set_book
+    @book = Book.find(params[:id])
   end
 
 end

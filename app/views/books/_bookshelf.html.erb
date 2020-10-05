@@ -31,4 +31,17 @@
     </div>
   </div>
   <% end %>
+
+  <%# 本の登録がなかった場合、文字が表示される%>
+  <% if @books.length == 0 %>
+  <div class="book-flame2">
+    <div class="empty-titel">
+      本を登録しよう！
+    </div>
+    <%= link_to image_tag('header-logo1.png', size: '35x35'), new_book_path %>
+    <div class="empty-titel">
+      から登録できるよ！
+    </div>
+  </div>
+  <% end %>
 </div>

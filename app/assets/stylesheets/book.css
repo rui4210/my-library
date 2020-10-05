@@ -177,3 +177,25 @@
   text-align: center;
   margin-bottom: -60px;
 }
+
+.empty-titel {
+  width: 100%;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+.book-flame2 {
+  width: 70%;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  height: 200px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  box-shadow: 0 0 3px rgba(160,166,179,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
