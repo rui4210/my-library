@@ -5,19 +5,31 @@
     </div>
     <div class="bookshelf-header-form">
         <%= form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form| %>
-          <%= form.text_field :keyword, placeholder: "キーワード入力(タイトル・著者・メモ...)", class: "search-input" %>
+          <%= form.text_field :keyword, placeholder: "キーワード入力(タイトル・著者...)", class: "search-input" %>
           <%= form.submit "検索", class: "search-btn" %>
         <% end %>
     </div>
     <div class="header-logos">
-      <div class="header-logo1">
+      <div class="header-logo1" id="lists">
         <%= link_to image_tag('header-logo1.png', size: '35x35'), new_book_path %>
+        <div class="show-lists hidden" id="pull-down">
+          <div class="hb1-1 hb1-2"></div>
+          <div id="pull-down-list">本新規登録</div>
+        </div>
       </div>
-      <div class="header-logo2">
-        <%= link_to image_tag('header-logo2.png' , size: '35x35'), '#' %>
+      <div class="header-logo2" id="lists2">
+        <%= link_to image_tag('header-logo2.png' , size: '35x35'), books_path %>
+        <div class="show-lists2 hidden" id="pull-down2">
+          <div class="hb2-1 hb2-2"></div>
+          <div>本棚一覧</div>
+        </div>
       </div>
-      <div class="header-logo3">
-        <%= link_to image_tag('header-logo3.png' , size: '35x35'), '#' %>
+      <div class="header-logo3" id="lists3">
+        <%= link_to image_tag('header-logo3.png' , size: '35x35'), destroy_user_session_path, method: :delete %>
+        <div class="show-lists3 hidden" id="pull-down3">
+          <div class="hb3-1 hb3-2"></div>
+          <div>ログアウト</div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,111 @@
+.show-lists{
+  width: 100px;
+  position: absolute;
+  padding: 5px;
+  left: -34px;
+  top: 50px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10%;
+  box-shadow:2px 5px 5px #ddd;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+}
+
+.hidden {
+  display: none;
+}
+
+.hb1-1 {
+    background: #f1f1f1;
+    top: -7px;
+    height: 14px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 14px;
+    box-shadow: 0 0 -3px #ddd;
+}
+
+.hb1-2 {
+  right: 41px;
+}
+
+.show-lists2 {
+  width: 100px;
+  position: absolute;
+  padding: 5px;
+  left: -35px;
+  top: 50px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10%;
+  box-shadow:2px 5px 5px #ddd;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+}
+
+.hb2-1 {
+  background: #f1f1f1;
+  top: -7px;
+  height: 14px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 14px;
+  box-shadow: 0 0 -3px #ddd;
+}
+
+.hb2-2 {
+right: 42px;
+}
+
+.show-lists3 {
+  width: 100px;
+  position: absolute;
+  padding: 5px;
+  left: -35px;
+  top: 50px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10%;
+  box-shadow:2px 5px 5px #ddd;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+}
+
+.hb3-1 {
+  background: #f1f1f1;
+  top: -7px;
+  height: 14px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 14px;
+  box-shadow: 0 0 -3px #ddd;
+}
+
+.hb3-2 {
+right: 42px;
+}
+
+.show-lists4 {
+  width: 100px;
+  position: absolute;
+  padding: 5px;
+  left: -22px;
+  bottom: -25px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10%;
+  box-shadow:2px 5px 5px #ddd;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+}
+
+.hb4-1 {
+  background: #f1f1f1;
+  top: -7px;
+  height: 14px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 14px;
+  box-shadow: 0 0 -3px #ddd;
+}
+
+.hb4-2 {
+right: 42px;
+}

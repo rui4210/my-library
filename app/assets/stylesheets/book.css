@@ -31,14 +31,17 @@
 
 .header-logo1 {
   margin: 0px 15px;
+  position: relative;
 }
 
 .header-logo2 {
   margin: 0px 15px;
+  position: relative;
 }
 
 .header-logo3 {
   margin: 0px 15px;
+  position: relative;
 }
 
 .bookshelf-header-form {
@@ -162,6 +165,7 @@
   align-items: flex-end;
   margin-right: 5px;
   margin-bottom: -35px;
+  position: relative;
 }
 
 .search-titel {

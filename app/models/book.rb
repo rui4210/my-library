@@ -17,9 +17,6 @@ class Book < ApplicationRecord
       Book.where('title LIKE(?)', "%#{search}%")
       Book.where('author LIKE(?)', "%#{search}%")
       Book.where('genre LIKE(?)', "%#{search}%")
-      Book.where('publishing LIKE(?)', "%#{search}%")
-      Book.where('record_date LIKE(?)', "%#{search}%")
-      Book.where('memo LIKE(?)', "%#{search}%")
     else
       Book.all
     end
