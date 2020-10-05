@@ -19,7 +19,7 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
   end
-  
+
   def edit
     @book = Book.find(params[:id])
   end
@@ -44,7 +44,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:reading_situation_id, :record_date, :title, :cover, :genre, :author, :publishing, :memo, :impression, :image, :evaluation_id)
+    params.require(:book).permit(:reading_situation_id, :record_date, :title, :cover, :genre, :author, :publishing, :memo, :impression, :image, :evaluation_id).merge(user_id: current_user.id)
   end
 
 end
