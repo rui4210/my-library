@@ -65,6 +65,8 @@
   width: 100%;
   padding: 10px;
   letter-spacing: 1px;
+  background-color: white;
+  border: 1px solid #ddd;
 }
 .account-page .btn {
   display: inline-block;
