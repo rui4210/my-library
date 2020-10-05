@@ -10,6 +10,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.text :impression
       t.integer :reading_situation_id, null: false
       t.integer :evaluation_id
+      t.references :user, null: false, foreign_key: true
       t.timestamps
     end
   end
