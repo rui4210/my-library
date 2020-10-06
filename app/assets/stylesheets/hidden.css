@@ -57,6 +57,7 @@ right: 42px;
 }
 
 .show-lists3 {
+  height: 50px;
   width: 100px;
   position: absolute;
   padding: 5px;
