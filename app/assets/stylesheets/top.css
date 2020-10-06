@@ -11,7 +11,8 @@
 .main-view{
   height: 100vh;
   width: 100vw;
-  background-image: url("library.png");
+  background-color: #fafafa;
+  /*background-image: url("library.png");*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
