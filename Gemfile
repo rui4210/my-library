@@ -71,3 +71,5 @@ group :production do
 end
 
 gem 'faker'
+
+gem "aws-sdk-s3", require: false

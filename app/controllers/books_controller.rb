@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :edit, :search]
-  before_action :set_books, only: [:edit, :update, :show, :destroy]
 
 
   def index
@@ -54,10 +53,6 @@ class BooksController < ApplicationController
     unless user_signed_in?
       redirect_to user_session_path
     end
-  end
-
-  def set_book
-    @book = Book.find(params[:id])
   end
 
 end
