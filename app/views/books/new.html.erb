@@ -54,27 +54,27 @@
           タイトル
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :title, class:"books-text", id:"book-title", placeholder:"本のタイトル（必須 100文字まで)", maxlength:"100" %>
+        <%= f.text_field :title, class:"books-text", id:"book-title", placeholder:"本のタイトル", maxlength:"100" %>
         <div class="books-explain">
           <div class="weight-bold-text">
             ジャンル
             <span class="indispensable2">任意</span>
           </div>
-          <%= f.text_field :genre, class:"books-text", id:"book-genre", placeholder:"本のジャンル（任意 20文字まで）（小説、漫画、ビジネス書など）",maxlength:"20" %>
+          <%= f.text_field :genre, class:"books-text", id:"book-genre", placeholder:"本のジャンル（小説、漫画、ビジネス書など）",maxlength:"20" %>
         </div>
         <div class="books-explain">
           <div class="weight-bold-text">
             著者
             <span class="indispensable2">任意</span>
           </div>
-          <%= f.text_field :author, class:"books-text", id:"book-author", placeholder:"本の著者（任意 50文字まで）",maxlength:"50" %>
+          <%= f.text_field :author, class:"books-text", id:"book-author", placeholder:"本の著者",maxlength:"50" %>
         </div>
         <div class="books-explain">
           <div class="weight-bold-text">
             出版
             <span class="indispensable2">任意</span>
           </div>
-          <%= f.text_field :publishing, class:"books-text", id:"book-publishing", placeholder:"本の出版（任意 50文字まで）",maxlength:"50" %>
+          <%= f.text_field :publishing, class:"books-text", id:"book-publishing", placeholder:"本の出版",maxlength:"50" %>
         </div>
       </div>
       <%# /商品名と商品説明 %>
@@ -85,14 +85,14 @@
             メモ
             <span class="indispensable2">任意</span>
           </div>
-          <%= f.text_area :memo, class:"books-text", id:"book-memo", placeholder:"メモ（任意 200文字まで）" ,rows:"4" ,maxlength:"200" %>
+          <%= f.text_area :memo, class:"books-text", id:"book-memo", placeholder:"メモ" ,rows:"4" ,maxlength:"200" %>
       </div>
       <div class="books-explain">
           <div class="weight-bold-text">
             感想・要約
-            <span class="indispensable2">任意</span>
+            <span class="indispensable">必須</span>
           </div>
-          <%= f.text_area :impression, class:"books-text", id:"book-impression", placeholder:"感想・要約（任意 3000文字まで）" ,rows:"7" ,maxlength:"3000" %>
+          <%= f.text_area :impression, class:"books-text", id:"book-impression", placeholder:"感想・要約" ,rows:"7" ,maxlength:"3000" %>
       </div>
       <%# /メモ・感想・要約 %>
 
@@ -100,7 +100,7 @@
       <div class="img-upload">
         <div class="weight-bold-text">
           感想・要約（画像）
-          <span class="indispensable2">任意</span>
+          <span class="indispensable">必須</span>
         </div>
         <div class="click-upload">
           <p>

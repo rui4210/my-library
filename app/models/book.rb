@@ -29,6 +29,10 @@ class Book < ApplicationRecord
     validates :title
     #表紙
     validates :cover
+    #感想・要約（画像）
+    validates :image
+    #感想・要約
+    validates :impression
     #登録日
     validates :record_date
     #読書状況

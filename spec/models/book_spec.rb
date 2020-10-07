@@ -25,6 +25,11 @@ RSpec.describe Book, type: :model do
         @book.valid?
         expect(@book.errors.full_messages).to include("Cover can't be blank")
       end
+      it "感想・要約（画像）が空だと登録できない" do
+        @book.image = nil
+        @book.valid?
+        expect(@book.errors.full_messages).to include("Image can't be blank")
+      end
       it "登録日のが空だと登録できない" do
         @book.record_date = ''
         @book.valid?
