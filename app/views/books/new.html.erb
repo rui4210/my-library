@@ -115,7 +115,7 @@
         <%= f.submit "登録する" ,class:"registration-btn" %>
       </div>
       <div class="registration-btn-contents2">
-        <%=link_to 'もどる', books_path, class:"back-btn" %>
+        <%=link_to 'もどる', "/users/#{current_user.id}" , class:"back-btn" %>
       </div>
       <%# /下部ボタン %>
   </div>

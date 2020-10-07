@@ -3,12 +3,14 @@
     <div class="header-title">
       <%= link_to image_tag('logo.png' , size: '90x90'), root_path %>
     </div>
-    <div class="bookshelf-header-form">
-        <%= form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form| %>
-          <%= form.text_field :keyword, placeholder: "キーワード入力(タイトル・著者...)", class: "search-input" %>
-          <%= form.submit "検索", class: "search-btn" %>
-        <% end %>
-    </div>
+    
+    <%#<div class="bookshelf-header-form">%>
+        <%#= form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%#= form.text_field :keyword, placeholder: "キーワード入力(タイトル・著者...)", class: "search-input" %>
+          <%#= form.submit "検索", class: "search-btn" %>
+        <%# end %>
+    <%#</div>%>
+
     <div class="header-logos">
       <div class="header-logo1" id="lists">
         <%= link_to image_tag('header-logo1.png', size: '35x35'), new_book_path %>
@@ -18,7 +20,7 @@
         </div>
       </div>
       <div class="header-logo2" id="lists2">
-        <%= link_to image_tag('header-logo2.png' , size: '35x35'), books_path %>
+        <%= link_to image_tag('header-logo2.png' , size: '35x35'), "/users/#{current_user.id}" %>
         <div class="show-lists2 hidden" id="pull-down2">
           <div class="hb2-1 hb2-2"></div>
           <div>本棚一覧</div>

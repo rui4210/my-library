@@ -6,6 +6,6 @@
 
 <div class="search-bookshelf">
   <% @books.each do |book| %>
-  <%= render partial: "bookshelf", locals: { book: book } %>
+  <%= render partial: "books/search_bookshelf", locals: { book: book } %>
   <% end %>
 </div>

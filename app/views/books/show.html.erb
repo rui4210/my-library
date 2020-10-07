@@ -83,7 +83,7 @@
       </div>
     </div>
       <div class="book-show-image1">
-        <% if @book.image = nil %>
+        <% if @book.image =nil %>
           <%= image_tag @book.image, class:"book-show-image2" %>
         <% else %>
           <h3 class="no-image-text">No Image</h3>
@@ -99,7 +99,7 @@
         <%=link_to '削除', book_path(@book.id), method: :delete, class:"show-delete-btn" %>
       </div>
       <div class="show-btn-contents">
-        <%=link_to '戻る', books_path, class:"show-back-btn" %>
+        <%=link_to '戻る', "/users/#{current_user.id}" , class:"show-back-btn" %>
       </div>
     </div>
   </div>

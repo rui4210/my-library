@@ -1,0 +1,49 @@
+<%= render "books/header" %>
+
+<div class="search-titel">
+  <span>〜　<%= current_user.name %> 　の本棚一覧　〜</span>
+</div>
+
+<div class="bookshelf">
+  <% @books.each do |book| %>
+  <div class="book-flame">
+    <div class="book-cover-flame">
+      <%= image_tag book.cover, class:"book-index-img" %>
+    </div>
+    <div class="book-informations">
+      <div class="book-title">
+        <%= book.title %>
+      </div>
+      <div class="book-author">
+        著者：  <%= book.author %>
+      </div>
+      <div class="book-genre">
+        ジャンル：  <%= book.genre %>
+      </div>
+      <div class="book-record-date">
+       登録日：  <%= book.record_date %>
+      </div>
+    </div>
+    <div class="book-logo" id="lists4">
+      <%= link_to image_tag('book-icon.png' , size: '60x60'), book_path(book.id) %>
+    　<div class="show-lists4 hidden" id="pull-down4">
+        <div class="hb4-1 hb4-2"></div>
+        <div>詳細表示</div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <%# 本の登録がなかった場合、文字が表示される%>
+  <% if @books.length == 0 %>
+  <div class="book-flame2">
+    <div class="empty-titel">
+      本を登録しよう！
+    </div>
+    <%= link_to image_tag('header-logo1.png', size: '35x35'), new_book_path %>
+    <div class="empty-titel">
+      から登録できるよ！
+    </div>
+  </div>
+  <% end %>
+</div>

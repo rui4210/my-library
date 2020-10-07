@@ -13,7 +13,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      return redirect_to books_path
+      return redirect_to "/users/#{current_user.id}"
     end
       render 'new'
   end
@@ -38,11 +38,11 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-    redirect_to books_path
+    redirect_to "/users/#{current_user.id}"
   end
 
   def search
-    @books = Book.search(params[:seach])
+    @books = Book.search(params[:keyword])
   end
 
   private
