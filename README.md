@@ -13,7 +13,7 @@
 
 ## テスト用アカウント
  ・ネーム: test
- ・メールアドレス: test@example.com
+ ・メールアドレス: test-1@example.com
  ・パスワード: 123qwe
 
 ## 利用方法

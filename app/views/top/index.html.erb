@@ -18,7 +18,7 @@
     <div class="top-icon-logo">
       <% if user_signed_in? %>
         <div class="icon-box">
-          <%= link_to image_tag('login.jpg' , size: '200x50'),  "/users/#{current_user.id}" %>
+          <%= link_to image_tag('login.jpg' , size: '200x50'),  "/users/show #{current_user.id}" %>
           <%= link_to image_tag('logout.jpg' , size: '200x50'), destroy_user_session_path, method: :delete %>
         </div>
       <% else %>

@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
 
-  def show    
+  def show
     @books = current_user.books
-    @books = Book.order("created_at DESC")
   end
 
 
